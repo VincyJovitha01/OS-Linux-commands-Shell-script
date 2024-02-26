@@ -117,12 +117,20 @@ Thi
 cut -d "|" -f 1 file22
 ## OUTPUT
 ```
-cut -d "|" -f 1 file22
+1001 
+1002 
+1003 
+```
 
 
 
 cut -d "|" -f 2 file22
 ## OUTPUT
+```
+ Ram 
+ tom 
+ Joe 
+```
 
 
 cat < newfile 
@@ -137,29 +145,40 @@ hello world
  
 grep Hello newfile 
 ## OUTPUT
-
+```
+Hello world
+```
 
 
 grep hello newfile 
 ## OUTPUT
-
+```
+hello world
+```
 
 
 
 grep -v hello newfile 
 ## OUTPUT
-
+```
+Hello world
+```
 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
-
+```
+Hello world
+hello world
+```
 
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
-
+```
+2
+```
 
 
 
@@ -170,6 +189,10 @@ grep -R ubuntu /etc
 
 grep -w -n world newfile   
 ## OUTPUT
+```
+1:Hello world
+2:hello world
+```
 
 
 cat < newfile 
@@ -193,17 +216,26 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-
+```
+ello world
+hello world
+```
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-
+```
+Hello world
+hello world
+```
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-
+```
+Hello world
+hello world
+```
 
 
 
