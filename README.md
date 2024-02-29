@@ -69,7 +69,15 @@ file1 file2 differ: byte 1, line 1
 ```
 comm file1 file2
  ## OUTPUT
-
+```
+	anil aggarwal
+	barun sengupta
+chanchal singhvi
+		c.k. shukla
+	lalit chowdury
+		s.n. dasgupta
+sumit chakrobarty
+```
  
 diff file1 file2
 ## OUTPUT
@@ -241,31 +249,45 @@ hello world
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
-
+```
+hello world
+```
 
 egrep '(world$)' newfile 
 ## OUTPUT
-
+```
+Hello world
+hello world
+```
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
-
+```
+Linux is best in this World
+```
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-
+```
+Hello world
+hello world
+Linux is best in this World
+```
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
-
+```
+Linux is world number 1
+```
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
+```
+Linux is world number 1
+```
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
